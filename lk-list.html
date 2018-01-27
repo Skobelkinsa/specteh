@@ -319,16 +319,14 @@
             $(".filter .date a").removeClass('active');
             $(this).addClass('active');
         });
-        $( "body" ).on('click', '.item .controls', function() {
-            return false;
-        });
-        $( "body" ).on('click', '.item .btn-controls', function() {
-            $(this).closest('.item').toggleClass('open');
-            $(this).closest('.item').find('.controls').toggleClass('open');
-        });
-        $( "body" ).on('click', '.item.open', function() {
-            $(this).removeClass('open');
-            $(this).find('.controls').toggleClass('open');
+        $('.item').on('click', function (e) {
+            console.log(e.target.className);
+            if(e.target.className=='btn-controls'){
+                $(this).toggleClass('open').find('.controls').toggleClass('open');
+            }
+            if(e.target.className=='item open'){
+                $(this).toggleClass('open').find('.controls').toggleClass('open');
+            }
         });
         $('.content input, .content select').styler();
     });
