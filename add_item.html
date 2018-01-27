@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Верстка для спецтех-портал.рф</title>
+    <link rel="stylesheet" href="style/global.css">
+</head>
+<body>
+<header>
+    <div class="content">
+        <a href="#" class="toggle-menu"><img src="img/menu.svg" width="18" alt="catalog"></a>
+        <div class="menu">
+            <a href="#">Объявления</a>
+            <a href="#">Контакты</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="location">
+            <!-- 03.01.18 --><a href="#" class="location_button"><img src="img/location-pin.svg" width="14" alt="location"><span>Выбрать город</span></a>
+            <p>Пермь</p>
+        </div>
+        <div class="login-user">
+            <a href="/lk/index"><img src="img/user-shape.svg" width="18" alt="location"><span>Личный кабинет</span></a>
+            <a class="logout" href="/site/logout"><span>Выйти</span></a>
+        </div>
+    </div>
+</header>
+<div class="gray-header">
+    <div class="content">
+        <a href="#" class="h1">Cпецтех-портал.рф</a>
+        <div class="search">
+            <input type="text" placeholder="Что ищем?">
+            <button><img src="img/search.svg" width="17" alt="location"></button>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="detail-page">
+        <div class="left-block">
+            <div class="info-add-item">
+                <div class="title">Подавать объявления просто!</div>
+                <p>Заполните короткую форму и наслаждайтесь результатом.</p>
+                <p>Для успешной модерации соблюдайте несложные правила:</p>
+                <ul>
+                    <li>— не подавайте одно и то же объявление повторно</li>
+                    <li>— нельзя снимать с продажи (или удалять) объявление и подавать такое же до истечения срока действия</li>
+                    <li>— не продавайте запрещённые товары</li>
+                    <li>— выбирайте для объявления наиболее подходящую категорию</li>
+                    <li>— Вы можете иметь только одну учетную запись</li>
+                    <li>— не регистрируйтесь повторно на другой e-mail</li>
+                </ul>
+                <a href="#">Подробнее о наших правилах</a>
+            </div>
+            <div class="warn">
+                <p>Перед добавлением на сайт каждое объявление проверяется на соответствие правилам. Объявления, нарушающие правила, блокируются.</p>
+            </div>
+        </div>
+        <div class="content-block">
+            <div class="add-item">
+                <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="false">
+                    <div class="h1">Добавить объявление</div>
+                    <b class="sub">Что бы добавить объявление <br>Вам нужно пройти регистрацию или войти</b>
+                    <div class="panel">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                               <!-- 03.01.18 --> <a>
+                                    Регистрация / вход
+                                </a>
+                            </h4>
+                        </div>
+                        <!-- 03.01.18 --><div id="collapseOne">
+                            <div class="panel-body">
+                                <div class="reg active">
+                                    <div class="group">
+                                        <input type="text" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>Имя</label>
+                                    </div>
+                                    <div class="group">
+                                        <input type="text" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>E-mail</label>
+                                    </div>
+                                    <div class="group">
+                                        <input type="password" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>Пароль</label>
+                                    </div>
+                                    <div class="group">
+                                        <input type="password" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>Повторите пароль</label>
+                                    </div>
+                                    <div class="social">
+                                        <p>Войти используя:</p>
+                                        <a href="#"><img src="img/vk.svg" width="46" alt=""></a>
+                                        <a href="#"><img src="img/fb.svg" width="46" alt=""></a>
+                                        <a href="#"><img src="img/go.svg" width="46" alt=""></a>
+                                    </div>
+                                    <button class="btn">Зарегистрироваться</button>
+                                    <a class="login" href="#">Я уже зарегестрирован</a>
+                                </div>
+                                <div class="authorize">
+                                    <div class="group">
+                                        <input type="text" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>E-mail</label>
+                                    </div>
+                                    <div class="group">
+                                        <input type="password" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>Пароль</label>
+                                    </div>
+                                    <div class="social">
+                                        <p>Войти используя:</p>
+                                        <a href="#"><img src="img/vk.svg" width="46" alt=""></a>
+                                        <a href="#"><img src="img/fb.svg" width="46" alt=""></a>
+                                        <a href="#"><img src="img/go.svg" width="46" alt=""></a>
+                                    </div>
+                                    <button class="btn">Войти</button>
+                                    <a class="login" href="#">Зарегестрироваться</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                    <div class="title">Шаг 1 <span>Заполните контактную информацию</span></div>
+                    <div class="panel">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <!-- 03.01.18 --><a>
+                                    Контактная информация
+                                </a>
+                            </h4>
+                        </div>
+                        <!-- 03.01.18 --><div id="collapseTwo">
+                            <div class="panel-body">
+                                <div class="group">
+                                    <input type="text" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Имя</label>
+                                </div>
+                                <div class="group">
+                                    <input type="text" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Организация</label>
+                                </div>
+                                <div class="group">
+                                    <input type="text" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>E-mail</label>
+                                </div>
+                                <div class="group">
+                                    <input type="text" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Телефон</label>
+                                </div>
+                               <!-- 03.01.18 --><div class="group group_location_select">  
+									<!-- 03.01.18 --><input class="location_button" type="text" placeholder="" required>
+                                    <!-- 03.01.18 --><span class="highlight"></span>
+                                    <!-- 03.01.18 --><span class="bar"></span>
+                                    <!-- 03.01.18 --><label>Город</label>
+									<!-- 03.01.18 --><p class="group_locaion_select_city">Пермь</p>
+                                <!-- 03.01.18 --></div>
+                                <div class="checkbox-list">
+                                    <label><b>Удобный вид связи:</b></label>
+                                    <label><input type="checkbox" name="mails" checked>Почта</label>
+                                    <label><input type="checkbox" name="phones">Телефон</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                    <div class="title">Шаг 2 <span>Добавьте описание</span></div>
+                   <!-- 03.01.18 --><div class="panel mh800">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <!-- 03.01.18 --><a>
+                                    Объявление
+                                </a>
+                            </h4>
+                        </div>
+                        <!-- 03.01.18 --><div id="collapseThree">
+                            <div class="panel-body">
+                                <div class="select-list">
+                                    <select>
+                                        <option value="">Категория</option>
+                                        <option value="">Категория</option>
+                                        <option value="">Категория</option>
+                                        <option value="">Категория</option>
+                                    </select>
+                                    <select>
+                                        <option value="">Вид техники</option>
+                                        <option value="">Вид техники</option>
+                                        <option value="">Вид техники</option>
+                                        <option value="">Вид техники</option>
+                                    </select>
+                                </div>
+                                <div class="range-list">
+                                    <div class="range-block">
+                                        <label>Параметр</label>
+                                        <div id="slider-range-param1" style="max-width: 282px;">
+                                            <input type="hidden" class="slider-range-value">
+                                        </div>
+                                    </div>
+                                    <div class="range-block">
+                                        <label>Параметр</label>
+                                        <div id="slider-range-param2" style="max-width: 282px;">
+                                            <input type="hidden" class="slider-range-value">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group">
+                                    <input type="text" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Вид техники</label>
+                                </div>
+                                <div class="select-list">
+                                    <select>
+                                        <option value="">Вид техники</option>
+                                        <option value="">Вид техники</option>
+                                        <option value="">Вид техники</option>
+                                        <option value="">Вид техники</option>
+                                    </select>
+                                    <select>
+                                        <option value="">Год выпуска</option>
+                                        <option value="">Год выпуска</option>
+                                        <option value="">Год выпуска</option>
+                                        <option value="">Год выпуска</option>
+                                    </select>
+                                </div>
+                                <b class="sub-title">Описание</b>
+                                <div class="group">
+                                    <input type="text" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Заголовок</label>
+                                </div>
+                                <div class="group">
+                                    <input type="text" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Описание</label>
+                                </div>
+                                <div class="loader-photo">
+                                    <b>Фотография</b>
+                                    <input type="file" value="Загрузить изображение">
+                                    <p>Допустимые форматы: jpg/jpeg и png. Имя изображения должно содержать только цифры и символы латинского алфавита.</p>
+                                </div>
+                                <div class="group">
+                                    <!-- 03.01.18 --><input type="text">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Цена</label>
+                                </div>
+                                <div class="group">
+                                    <input type="text" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Минимальный заказ</label>
+                                </div>
+                                <div class="select-list">
+                                    <select>
+                                        <option value="">Категория</option>
+                                        <option value="">Категория</option>
+                                        <option value="">Категория</option>
+                                        <option value="">Категория</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                    <div class="title">Шаг 3 <span>Так ваше объявление будет иметь успех</span></div>
+                    <div class="panel">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Сделать эффективнее
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <div class="checkbox-list">
+                                    <label for="baz2"><input type="radio" name="service" id="baz2">Баннер</label>
+                                    <label for="baz4"><input type="radio" name="service" id="baz4">Пакет услуг</label>
+                                    <label for="baz3"><input type="radio" name="service" id="baz3">VIP-объявление</label>
+                                    <label for="baz1"><input type="radio" name="service" id="baz1" checked>Нет</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                    <button class="btn">Добавить объявление</button>
+                </div>
+                <!-- end of #accordion -->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/global.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/wNumb.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/location.js"></script>
+<div id="md_location_overlay">
+	<div id="md_location">
+		<p>Выберите город</p>
+		<div id="main_cities">			
+			<ul class="main_cities_list">
+				<li><a class="js-regions-link"><strong>Москва</strong></a></li>
+				<li><a class="js-regions-link"><strong>Санкт-Петербург</strong></a></li>
+				<li><a class="js-regions-link">Астрахань</a></li>
+				<li><a class="js-regions-link">Барнаул</a></li>
+				<li><a class="js-regions-link">Волгоград</a></li>
+				<li><a class="js-regions-link">Воронеж</a></li>
+				<li><a class="js-regions-link">Екатеринбург</a></li>
+				<li><a class="js-regions-link">Ижевск</a></li>
+				<li><a class="js-regions-link">Иркутск</a></li>
+				<li><a class="js-regions-link">Казань</a></li>
+			</ul>
+			<ul class="main_cities_list">
+				<li><a class="js-regions-link">Калининград</a></li>
+				<li><a class="js-regions-link">Краснодар</a></li>
+				<li><a class="js-regions-link">Красноярск</a></li>
+				<li><a class="js-regions-link">Набережные Челны</a></li>
+				<li><a class="js-regions-link">Нижний Новгород</a></li>
+				<li><a class="js-regions-link">Новосибирск</a></li>
+				<li><a class="js-regions-link">Омск</a></li>
+				<li><a class="js-regions-link">Оренбург</a></li>
+				<li><a class="js-regions-link">Пермь</a></li>
+				<li><a class="js-regions-link">Ростов-на-Дону</a></li>
+			</ul>
+			<ul class="main_cities_list">
+				<li><a class="js-regions-link">Самара</a></li>
+				<li><a class="js-regions-link">Саратов</a></li>
+				<li><a class="js-regions-link">Ставрополь</a></li>
+				<li><a class="js-regions-link">Тольятти</a></li>
+				<li><a class="js-regions-link">Тула</a></li>
+				<li><a class="js-regions-link">Тюмень</a></li>
+				<li><a class="js-regions-link">Ульяновск</a></li>
+				<li><a class="js-regions-link">Уфа</a></li>
+				<li><a class="js-regions-link">Челябинск</a></li>
+				<li><a class="js-regions-link">Ярославль</a></li>
+			</ul>			
+		</div>
+		<!-- 03.01.18 --><div id="all_cities">			
+			<!-- 03.01.18 --><select id="select_region">
+				<!-- 03.01.18 --><option value="r0" checked>Выберите область</option>
+				<!-- 03.01.18 --><option value="r39">Адыгея [01]</option>
+				<!-- 03.01.18 --><option value="r15">Алтайский край [04]</option>
+				<!-- 03.01.18 --><option value="r57">Амурская область [28]</option>				
+				<!-- 03.01.18 --><option value="r27">Архангельская область [29]</option>
+				<!-- 03.01.18 --><option value="r58">Астраханская область [30]</option>				
+				<!-- 03.01.18 --><option value="r4">Башкортостан [01]</option>
+				<!-- 03.01.18 --><option value="r28">Белгородская область [01]</option>
+				<!-- 03.01.18 --><option value="r59">Брянская область [01]</option>
+				<!-- 03.01.18 --><option value="r40">Бурятия [01]</option>
+				<!-- 03.01.18 --><option value="r17">Владимирская область [01]</option>
+				<!-- 03.01.18 --><option value="r18">Волгоградская область [01]</option>
+				<!-- 03.01.18 --><option value="r29">Вологодская область [01]</option>
+				<!-- 03.01.18 --><option value="r60">Воронежская область [01]</option>
+				<!-- 03.01.18 --><option value="r7">Дагестан [01]</option>
+				<!-- 03.01.18 --><option value="r55">Забайкальский край [01]</option>
+				<!-- 03.01.18 --><option value="r61">Ивановская область [01]</option>
+				<!-- 03.01.18 --><option value="r41">Ингушетия [01]</option>
+				<!-- 03.01.18 --><option value="r19">Иркутская область [01]</option>
+				<!-- 03.01.18 --><option value="r42">Кабардино-Балкария [01]</option>
+				<!-- 03.01.18 --><option value="r62">Калининградская область [01]</option>
+				<!-- 03.01.18 --><option value="r43">Калмыкия [01]</option>
+				<!-- 03.01.18 --><option value="r56">Камчатский край [01]</option>
+				<!-- 03.01.18 --><option value="r44">Карачаево-Черкесия [01]</option>
+				<!-- 03.01.18 --><option value="r45">Карелия [01]</option>				
+				<!-- 03.01.18 --><option value="r30">Калужская область [01]</option>
+				<!-- 03.01.18 --><option value="r20">Кемеровская область [01]</option>
+				<!-- 03.01.18 --><option value="r63">Кировская область [01]</option>
+				<!-- 03.01.18 --><option value="r46">Коми [01]</option>
+				<!-- 03.01.18 --><option value="r64">Костромская область [01]</option>				
+				<!-- 03.01.18 --><option value="r9">Краснодарский край [01]</option>
+				<!-- 03.01.18 --><option value="r16">Красноярский край [01]</option>
+				<!-- 03.01.18 --><option value="r13">Крым [01]</option>
+				<!-- 03.01.18 --><option value="r65">Курганская область [01]</option>
+				<!-- 03.01.18 --><option value="r31">Курская область [01]</option>
+				<!-- 03.01.18 --><option value="r2">Ленинградская область [01]</option>
+				<!-- 03.01.18 --><option value="r32">Липецкая область [01]</option>
+				<!-- 03.01.18 --><option value="r47">Марий Эл [01]</option>
+				<!-- 03.01.18 --><option value="r48">Мордовия [01]</option>
+				<!-- 03.01.18 --><option value="r1" name="r1">Московская область [01]</option>
+				<!-- 03.01.18 --><option value="r66">Мурманская область [01]</option>
+				<!-- 03.01.18 --><option value="r21">Нижегородская область [01]</option>
+				<!-- 03.01.18 --><option value="r67">Новгородская область [01]</option>
+				<!-- 03.01.18 --><option value="r33">Новосибирская область [01]</option>
+				<!-- 03.01.18 --><option value="r68">Омская область [01]</option>
+				<!-- 03.01.18 --><option value="r34">Оренбургская область [01]</option>
+				<!-- 03.01.18 --><option value="r69">Орловская область [01]</option>
+				<!-- 03.01.18 --><option value="r70">Пензенская область [01]</option>
+				<!-- 03.01.18 --><option value="r25">Пермский край [01]</option>
+				<!-- 03.01.18 --><option value="r10">Приморский край [01]</option>
+				<!-- 03.01.18 --><option value="r72">Псковская область [01]</option>
+				<!-- 03.01.18 --><option value="r3">Ростовская область [01]</option>
+				<!-- 03.01.18 --><option value="r73">Рязанская область [01]</option>
+				<!-- 03.01.18 --><option value="r11">Самарская область [01]</option>
+				<!-- 03.01.18 --><option value="r74">Сахалинская область [01]</option>
+				<!-- 03.01.18 --><option value="r22">Саратовская область [01]</option>
+				<!-- 03.01.18 --><option value="r71">Севастополь [01]</option>
+				<!-- 03.01.18 --><option value="r49">Северная Осетия [01]</option>
+				<!-- 03.01.18 --><option value="r12">Свердловская область [01]</option>
+				<!-- 03.01.18 --><option value="r75">Смоленская область [01]</option>
+				<!-- 03.01.18 --><option value="r5">Ставропольский край [01]</option>
+				<!-- 03.01.18 --><option value="r76">Тамбовская область [01]</option>
+				<!-- 03.01.18 --><option value="r8">Татарстан [01]</option>
+				<!-- 03.01.18 --><option value="r77">Тверская область [01]</option>
+				<!-- 03.01.18 --><option value="r35">Томская область [01]</option>
+				<!-- 03.01.18 --><option value="r36">Тульская область [01]</option>
+				<!-- 03.01.18 --><option value="r51">Тыва [01]</option>
+				<!-- 03.01.18 --><option value="r78 r_last">Тюменская область [01]</option>				
+				<!-- 03.01.18 --><option value="r52">Удмуртия [01]</option>
+				<!-- 03.01.18 --><option value="r37">Ульяновская область [01]</option>
+				<!-- 03.01.18 --><option value="r26">Хабаровский край [01]</option>
+				<!-- 03.01.18 --><option value="r53">Хакасия [01]</option>
+				<!-- 03.01.18 --><option value="r14">Ханты-Мансийский автономный округ — Югра [01]</option>
+				<!-- 03.01.18 --><option value="r54">Чечня [01]</option>
+				<!-- 03.01.18 --><option value="r6">Челябинская область [01]</option>
+				<!-- 03.01.18 --><option value="r23">Чувашия [01]</option>
+				<!-- 03.01.18 --><option value="r50">Якутия [01]</option>
+				<!-- 03.01.18 --><option value="r24">Ямало-Ненецкий автономный округ [01]</option>
+				<!-- 03.01.18 --><option value="r38">Ярославская область [01]</option>
+			<!-- 03.01.18 --></select>
+			<select id="select_city"></select>			
+		</div>
+		<button>Выбрать город</button>
+	</div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('.content input, .content select').styler();
+        $('.panel-body a.login').on('click', function () {
+            $('.panel-body .reg').toggleClass('active');
+            $('.panel-body .authorize').toggleClass('active');
+        });
+
+
+        var rangeSlider = document.getElementById('slider-range-param1');
+        noUiSlider.create(rangeSlider, {
+            start: [ 50 ],
+            tooltips: [ wNumb({ decimals: 1 }) ],
+            step: 10,
+            pips: {
+                mode: 'values',
+                values: [0, 100],
+                density: 100
+            },
+            connect: [true, false],
+            range: {
+                'min': [  0 ],
+                'max': [ 100 ]
+            }
+        });
+        rangeSlider.noUiSlider.on('update', function( values, handle ) {
+            $('#slider-range-param1 .slider-range-value').val(Math.round(values[handle]));
+        });
+        var rangeSlider = document.getElementById('slider-range-param2');
+        noUiSlider.create(rangeSlider, {
+            start: [30, 130],
+            connect: true,
+            tooltips: [true, wNumb({ decimals: 1 })],
+            pips: {
+                mode: 'values',
+                values: [0, 200],
+                density: 200
+            },
+            range: {
+                'min': [0],
+                '10%': [10, 10],
+                '50%': [80, 50],
+                '80%': 150,
+                'max': 200
+            }
+        });
+        rangeSlider.noUiSlider.on('update', function( values, handle ) {
+            $('#slider-range-param2 .slider-range-value').val(Math.round(values[handle]));
+        });
+
+    });
+</script>
+<footer>
+    <div class="color-category">
+        <div class="content">
+            <a href="#">Аренда</a>
+            <a href="#">Оказание услуг</a>
+            <a href="#">Заявки на аренду</a>
+            <a href="#">Продажа и ремонт</a>
+        </div>
+    </div>
+    <div class="gray-light">
+        <div class="content">
+            <div class="link-left">
+                <a href="#">Помощь</a>
+                <a href="#">Оферта</a>
+                <a href="#">Услуги портала</a>
+                <span class="cop">
+                    © Спецтехника — сайт  объявлений 2017
+                </span>
+            </div>
+            <div class="logo"><a href="/">Спецтехника</a></div>
+        </div>
+    </div>
+    <div class="black">
+        <div class="content">
+            <p>Использование сайта, в том числе подача объявлений, означает согласие с пользовательским соглашением. <br>
+                Оплачивая услуги на сайте, вы принимаете оферту
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

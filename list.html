@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Верстка для спецтех-портал.рф</title>
+    <link rel="stylesheet" href="style/global.css">
+</head>
+<body>
+<header>
+    <div class="content">
+        <a href="#" class="toggle-menu"><img src="img/menu.svg" width="18" alt="catalog"></a>
+        <div class="menu">
+            <a href="#">Объявления</a>
+            <a href="#">Контакты</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="location">
+            <a href="#" id="location_button"><img src="img/location-pin.svg" width="14" alt="location"><span>Выбрать город</span></a>
+            <p>Пермь</p>
+        </div>
+        <div class="login-user">
+            <a href="/lk/index"><img src="img/user-shape.svg" width="18" alt="location"><span>Личный кабинет</span></a>
+            <a class="logout" href="/site/logout"><span>Выйти</span></a>
+        </div>
+    </div>
+</header>
+<div class="gray-header">
+    <div class="content">
+        <a href="#" class="h1">Cпецтех-портал.рф</a>
+        <div class="search">
+            <input type="text" placeholder="Что ищем?">
+            <button><img src="img/search.svg" width="17" alt="location"></button>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="category-page">
+        <div class="left-block">
+            <div class="category-section-list">
+                <span></span>
+                <a href="#">
+                    Аренда спецтехники
+                    и оборудования
+                </a>
+                <a href="#">
+                    Оказание
+                    специальных услуг
+                </a>
+                <a href="#">
+                    Заявки на аренду спецтехники
+                    и оборудования
+                </a>
+                <a href="#">
+                    Продажа и ремонт спецтехники, запчастей и оборудования
+                </a>
+            </div>
+            <a class="add-btn">Добавить объявление</a>
+            <div class="banner-block">
+                <div class="category-item">
+                    <a href="#"><img src="img/demo/t2.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#"><img src="img/demo/t2.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#"><img src="img/demo/t2.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#"><img src="img/demo/t2.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#"><img src="img/demo/t2.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-block">
+            <div class="filter-category">
+                <div class="back">Назад</div>
+                <select class="category">
+                    <option value="">Аренда спецтехники и оборудования</option>
+                    <option value="">Оказание специальных услуг</option>
+                    <option value="">Заявки на аренду спецтехники и оборудования</option>
+                    <option value="">Продажа и ремонт спецтехники, запчастей и оборудования</option>
+                </select>
+                <div class="search">
+                    <select id="search_select">
+                        <option value="">Все рубрики</option>
+						<optgroup label="Аренда спецтехники и оборудования">-->
+						<option value="4" >Аренда самосвалов</option>
+						<option value="1" >Аренда бульдозеров</option>
+						<option value="2" >Аренда экскаваторов</option>
+						<option value="3" >Аренда камазов</option>
+						<option value="7" selected="selected">Аренда автобусов</option>
+						</optgroup>
+                    </select>
+                    <div class="search-input"><input type="text" placeholder="Поиск по объявлениям"></div>
+                    <select class="region">
+                        <option value="">Регион</option>
+                        <option value="">Регион</option>
+                        <option value="">Регион</option>
+                        <option value="">Регион Регион Регион Регион Регион</option>
+                    </select>
+                </div>
+                <button>Найти</button>
+                <a href="#" class="show-filter">Фильтр <img src="img/filter.svg" width="18" alt=""></a>
+                <div class="filter-block">
+                    <div class="range-list">
+                        <div class="range-block">
+                            <label>Вместимость</label>
+                            <div id="slider-range-param1" style="max-width: 282px;">
+                            <input class="slider-range-value1" type="hidden" value="10" name="filter[1][from]" id="filter_1_from" />                        <input class="slider-range-value2" type="hidden" value="150" name="filter[1][to]" id="filter_1_to" />                    </div>
+                        </div>
+                    </div>
+                    <div class="select-list">
+                        <label>Кондиционер</label>
+                        <select name="filter[2]" id="filter_2">
+                            <option value="2">Нет</option>
+                            <option value="1">Да</option>
+                        </select>            </div>
+                    <div class="checkbox-list">
+                        <label>Специальность</label>
+                        <span id="filter_3"><label><input value="5" id="filter_3_0" type="checkbox" name="filter[3][]" /> Рабочий</label><br /><label><input value="4" id="filter_3_1" type="checkbox" name="filter[3][]" /> Школьный</label><br /><label><input value="3" id="filter_3_2" type="checkbox" name="filter[3][]" /> Туристический</label></span>            </div>
+
+
+                </div>
+            </div>
+            <div class="sort-block">
+                <div class="bread">
+                    <a href="#">Все объявления</a>
+                    <a href="#">Рубрика</a>
+                    <a href="#" class="active">Подрубрика</a>
+                </div>
+                <div class="view-mode">
+                    <span>Вид </span>
+                    <a href="#" class="active" rel="block"><svg width="13px" height="13px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><title>grid</title><polygon points="5.48 0 0.91 0 0 0 0 0.91 0 5.48 0 6.39 0.91 6.39 5.48 6.39 6.39 6.39 6.39 5.48 6.39 0.91 6.39 0 5.48 0"/><polygon points="13.09 0 8.52 0 7.61 0 7.61 0.91 7.61 5.48 7.61 6.39 8.52 6.39 13.09 6.39 14 6.39 14 5.48 14 0.91 14 0 13.09 0"/><polygon points="5.48 7.61 0.91 7.61 0 7.61 0 8.52 0 13.09 0 14 0.91 14 5.48 14 6.39 14 6.39 13.09 6.39 8.52 6.39 7.61 5.48 7.61"/><polygon points="13.09 7.61 8.52 7.61 7.61 7.61 7.61 8.52 7.61 13.09 7.61 14 8.52 14 13.09 14 14 14 14 13.09 14 8.52 14 7.61 13.09 7.61"/></svg></a>
+                    <a href="#" rel="full"><svg width="18px" height="13px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9.43"><title>listing-option</title><path d="M1.5,3.57H0.21a0.21,0.21,0,0,0-.15.06A0.21,0.21,0,0,0,0,3.79V5.07a0.21,0.21,0,0,0,.06.15,0.21,0.21,0,0,0,.15.06H1.5a0.22,0.22,0,0,0,.21-0.21V3.79A0.22,0.22,0,0,0,1.5,3.57Z" transform="translate(0 -1)"/><path d="M1.5,8.71H0.21a0.21,0.21,0,0,0-.15.06A0.21,0.21,0,0,0,0,8.93v1.29a0.21,0.21,0,0,0,.06.15,0.21,0.21,0,0,0,.15.06H1.5a0.22,0.22,0,0,0,.21-0.21V8.93A0.22,0.22,0,0,0,1.5,8.71Z" transform="translate(0 -1)"/><path d="M1.5,6.14H0.21a0.21,0.21,0,0,0-.15.06A0.21,0.21,0,0,0,0,6.36V7.64a0.21,0.21,0,0,0,.06.15,0.21,0.21,0,0,0,.15.06H1.5a0.22,0.22,0,0,0,.21-0.21V6.36A0.22,0.22,0,0,0,1.5,6.14Z" transform="translate(0 -1)"/><path d="M1.5,1H0.21a0.21,0.21,0,0,0-.15.06A0.21,0.21,0,0,0,0,1.21V2.5a0.21,0.21,0,0,0,.06.15,0.21,0.21,0,0,0,.15.06H1.5A0.22,0.22,0,0,0,1.71,2.5V1.21A0.22,0.22,0,0,0,1.5,1Z" transform="translate(0 -1)"/><path d="M11.79,8.71h-9a0.22,0.22,0,0,0-.21.21v1.29a0.22,0.22,0,0,0,.21.21h9A0.22,0.22,0,0,0,12,10.21V8.93A0.22,0.22,0,0,0,11.79,8.71Z" transform="translate(0 -1)"/><path d="M11.79,6.14h-9a0.22,0.22,0,0,0-.21.21V7.64a0.22,0.22,0,0,0,.21.21h9A0.22,0.22,0,0,0,12,7.64V6.36A0.22,0.22,0,0,0,11.79,6.14Z" transform="translate(0 -1)"/><path d="M11.94,1.06A0.21,0.21,0,0,0,11.79,1h-9a0.22,0.22,0,0,0-.21.21V2.5a0.22,0.22,0,0,0,.21.21h9A0.22,0.22,0,0,0,12,2.5V1.21A0.21,0.21,0,0,0,11.94,1.06Z" transform="translate(0 -1)"/><path d="M11.79,3.57h-9a0.22,0.22,0,0,0-.21.21V5.07a0.22,0.22,0,0,0,.21.21h9A0.22,0.22,0,0,0,12,5.07V3.79A0.22,0.22,0,0,0,11.79,3.57Z" transform="translate(0 -1)"/></svg></a>
+                </div>
+                <div class="date">
+                    <span>По дате </span>
+                    <a href="#" class="active"><svg width="13px" height="13px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.82 6.98"><title>sort-up</title><path d="M10.52,7l1.39-1.33L6,0,0.09,5.66,1.48,7,6,2.67Z" transform="translate(-0.09 -0.01)"/></svg></a>
+                    <a href="#"><svg width="13px" height="13px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.82 6.98"><title>Безымянный-1</title><path d="M6,4.33L1.48,0,0.09,1.34,6,7l5.91-5.65L10.52,0Z" transform="translate(-0.09 -0.01)"/></svg></a>
+                </div>
+            </div>
+            <div class="category-list">
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t5.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="20" alt=""><span>+7 123 456 78 90<div class="right arrow"></div></span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t6.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="20" alt=""><span>+7 123 456 78 90<div class="right arrow"></div></span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t7.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="20" alt=""><span>+7 123 456 78 90<div class="right arrow"></div></span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alia.</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t5.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="20" alt=""><span>+7 123 456 78 90<div class="right arrow"></div></span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing el.</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t6.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="20" alt=""><span>+7 123 456 78 90<div class="right arrow"></div></span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicin.</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t7.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="20" alt=""><span>+7 123 456 78 90<div class="right arrow"></div></span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetu.</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t5.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="20" alt=""><span>+7 123 456 78 90<div class="right arrow"></div></span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing el.</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t6.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="20" alt=""><span>+7 123 456 78 90<div class="right arrow"></div></span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t7.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="20" alt=""><span>+7 123 456 78 90<div class="right arrow"></div></span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t5.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="20" alt=""><span>+7 123 456 78 90</span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicin.</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t6.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="20" alt=""><span>+7 123 456 78 90<div class="right arrow"></div></span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing el.</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t7.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="18" alt=""><span>+7 123 456 78 90<div class="right arrow"></div></span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicin.</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t5.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="20" alt=""><span>+7 123 456 78 90<div class="right arrow"></div></span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate eiu.</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t6.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="20" alt=""><span>+7 123 456 78 90<div class="right arrow"></div></span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <a href="#" class="imag-prev"><img src="img/demo/t7.jpg" alt=""></a>
+                    <div class="desc">
+                        <a href="#" class="title">Название техники</a>
+                        <span class="price">12 700</span>
+                        <p class="date">12 июня  12:34 </p>
+                        <a href="#" class="phone"><img src="img/phone.svg" width="20" alt=""><span>+7 123 456 78 90<div class="right arrow"></div></span></a>
+                        <p class="city">Город: Москва</p>
+                        <p class="type">Вид техники: экскаватор</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <a href="#">Назад</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">...</a>
+                <a href="#">27</a>
+                <a href="#">Вперед</a>
+            </div>
+            <div class="seo-text">
+                <div class="title">SEO текст</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisinuli. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. </p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="color-category">
+        <div class="content">
+            <a href="#">Аренда</a>
+            <a href="#">Оказание услуг</a>
+            <a href="#">Заявки на аренду</a>
+            <a href="#">Продажа и ремонт</a>
+        </div>
+    </div>
+    <div class="gray-light">
+        <div class="content">
+            <div class="link-left">
+                <a href="#">Помощь</a>
+                <a href="#">Оферта</a>
+                <a href="#">Услуги портала</a>
+                <span class="cop">
+                    © Спецтехника — сайт  объявлений 2017
+                </span>
+            </div>
+            <div class="logo"><a href="/">Спецтехника</a></div>
+        </div>
+    </div>
+    <div class="black">
+        <div class="content">
+            <p>Использование сайта, в том числе подача объявлений, означает согласие с пользовательским соглашением. <br>
+                Оплачивая услуги на сайте, вы принимаете оферту
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/global.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/wNumb.min.js"></script>
+<script src="js/location.js"></script>
+<div id="md_location_overlay">
+	<div id="md_location">
+		<p>Выберите город</p>
+		<div id="main_cities">			
+			<ul class="main_cities_list">
+				<li><a class="js-regions-link"><strong>Москва</strong></a></li>
+				<li><a class="js-regions-link"><strong>Санкт-Петербург</strong></a></li>
+				<li><a class="js-regions-link">Астрахань</a></li>
+				<li><a class="js-regions-link">Барнаул</a></li>
+				<li><a class="js-regions-link">Волгоград</a></li>
+				<li><a class="js-regions-link">Воронеж</a></li>
+				<li><a class="js-regions-link">Екатеринбург</a></li>
+				<li><a class="js-regions-link">Ижевск</a></li>
+				<li><a class="js-regions-link">Иркутск</a></li>
+				<li><a class="js-regions-link">Казань</a></li>
+			</ul>
+			<ul class="main_cities_list">
+				<li><a class="js-regions-link">Калининград</a></li>
+				<li><a class="js-regions-link">Краснодар</a></li>
+				<li><a class="js-regions-link">Красноярск</a></li>
+				<li><a class="js-regions-link">Набережные Челны</a></li>
+				<li><a class="js-regions-link">Нижний Новгород</a></li>
+				<li><a class="js-regions-link">Новосибирск</a></li>
+				<li><a class="js-regions-link">Омск</a></li>
+				<li><a class="js-regions-link">Оренбург</a></li>
+				<li><a class="js-regions-link">Пермь</a></li>
+				<li><a class="js-regions-link">Ростов-на-Дону</a></li>
+			</ul>
+			<ul class="main_cities_list">
+				<li><a class="js-regions-link">Самара</a></li>
+				<li><a class="js-regions-link">Саратов</a></li>
+				<li><a class="js-regions-link">Ставрополь</a></li>
+				<li><a class="js-regions-link">Тольятти</a></li>
+				<li><a class="js-regions-link">Тула</a></li>
+				<li><a class="js-regions-link">Тюмень</a></li>
+				<li><a class="js-regions-link">Ульяновск</a></li>
+				<li><a class="js-regions-link">Уфа</a></li>
+				<li><a class="js-regions-link">Челябинск</a></li>
+				<li><a class="js-regions-link">Ярославль</a></li>
+			</ul>			
+		</div>
+		<div id="all_cities">			
+			<select id="select_region">
+				<option value="r0" checked>Выберите область</option>
+				<option value="r1" name="r1">Московская область</option>
+				<option value="r2">Ленинградская область</option>
+				<option value="r3">Ростовская область</option>
+				<option value="r4">Башкортостан</option>
+				<option value="r5">Ставропольский край</option>
+				<option value="r6">Челябинская область</option>
+				<option value="r7">Дагестан</option>
+				<option value="r8">Татарстан</option>
+				<option value="r9">Краснодарский край</option>
+				<option value="r10">Приморский край</option>
+				<option value="r11">Самарская область</option>
+				<option value="r12">Свердловская область</option>
+				<option value="r13">Крым</option>
+				<option value="r14">Ханты-Мансийский автономный округ — Югра</option>
+				<option value="r15">Алтайский край</option>
+				<option value="r16">Красноярский край</option>
+				<option value="r17">Владимирская область</option>
+				<option value="r18">Волгоградская область</option>
+				<option value="r19">Иркутская область</option>
+				<option value="r20">Кемеровская область</option>
+				<option value="r21">Нижегородская область</option>
+				<option value="r22">Саратовская область</option>
+				<option value="r23">Чувашия</option>
+				<option value="r24">Ямало-Ненецкий автономный округ</option>
+				<option value="r25">Пермский край</option>
+				<option value="r26">Хабаровский край</option>
+				<option value="r27">Архангельская область</option>
+				<option value="r28">Белгородская область</option>
+				<option value="r29">Вологодская область</option>
+				<option value="r30">Калужская область</option>
+				<option value="r31">Курская область</option>
+				<option value="r32">Липецкая область</option>
+				<option value="r33">Новосибирская область</option>
+				<option value="r34">Оренбургская область</option>
+				<option value="r35">Томская область</option>
+				<option value="r36">Тульская область</option>
+				<option value="r37">Ульяновская область</option>
+				<option value="r38">Ярославская область</option>
+				<option value="r39">Адыгея</option>
+				<option value="r40">Бурятия</option>
+				<option value="r41">Ингушетия</option>
+				<option value="r42">Кабардино-Балкария</option>
+				<option value="r43">Калмыкия</option>
+				<option value="r44">Карачаево-Черкесия</option>
+				<option value="r45">Карелия</option>
+				<option value="r46">Коми</option>
+				<option value="r47">Марий Эл</option>
+				<option value="r48">Мордовия</option>
+				<option value="r49">Северная Осетия</option>
+				<option value="r50">Якутия</option>
+				<option value="r51">Тыва</option>
+				<option value="r52">Удмуртия</option>
+				<option value="r53">Хакасия</option>
+				<option value="r54">Чечня</option>
+				<option value="r55">Забайкальский край</option>
+				<option value="r56">Камчатский край</option>
+				<option value="r57">Амурская область</option>
+				<option value="r58">Астраханская область</option>
+				<option value="r59">Брянская область</option>
+				<option value="r60">Воронежская область</option>
+				<option value="r61">Ивановская область</option>
+				<option value="r62">Калининградская область</option>
+				<option value="r63">Кировская область</option>
+				<option value="r64">Костромская область</option>
+				<option value="r65">Курганская область</option>
+				<option value="r66">Мурманская область</option>
+				<option value="r67">Новгородская область</option>
+				<option value="r68">Омская область</option>
+				<option value="r69">Орловская область</option>
+				<option value="r70">Пензенская область</option>
+				<option value="r71">Севастополь</option>
+				<option value="r72">Псковская область</option>
+				<option value="r73">Рязанская область</option>
+				<option value="r74">Сахалинская область</option>
+				<option value="r75">Смоленская область</option>
+				<option value="r76">Тамбовская область</option>
+				<option value="r77">Тверская область</option>
+				<option value="r78">Тюменская область</option>
+			</select>
+			<select id="select_city"></select>			
+		</div>
+		<button>Выбрать город</button>
+	</div>
+</div>
+<script>
+    $(function() {
+        $('.category-section-list span').on('click', function () {
+            $('.category-section-list').toggleClass('open');
+        });
+        $( ".sort-block .view-mode a" ).click(function() {
+            $(".sort-block .view-mode a").removeClass('active');
+            $(this).addClass('active');
+            if($(this).attr('rel')=='full')
+                $(".category-list").addClass('full');
+            else
+                $(".category-list").removeClass('full');
+        });
+        $( ".sort-block .date a" ).click(function() {
+            $(".sort-block .date a").removeClass('active');
+            $(this).addClass('active');
+        });
+        $( ".category-item a.phone" ).click(function() {
+            $(this).toggleClass('active');
+        });
+
+        $( ".filter-category a.show-filter, .filter-category .back" ).click(function() {
+            $(".filter-category .filter-block, .filter-category").toggleClass('open');
+        });
+
+        $('.content input, .content select').styler();
+
+        var rangeSlider = document.getElementById('slider-range-param1');
+        noUiSlider.create(rangeSlider, {
+            start: [ 50 ],
+            tooltips: [ wNumb({ decimals: 1 }) ],
+            step: 0.1,
+            pips: {
+                mode: 'values',
+                values: [2, 5],
+                density: 100
+            },
+            connect: [true, false],
+            range: {
+                'min': [ 2 ],
+                'max': [ 5 ]
+            }
+        });
+        rangeSlider.noUiSlider.on('update', function( values, handle ) {
+            $('#slider-range-param1 .slider-range-value').val(Math.round(values[handle]));
+        });
+
+        var rangeSlider = document.getElementById('slider-range-param2');
+        noUiSlider.create(rangeSlider, {
+            start: [30, 130],
+            connect: true,
+            tooltips: [true, wNumb({ decimals: 1 })],
+            pips: {
+                mode: 'values',
+                values: [0, 200],
+                density: 200
+            },
+            range: {
+                'min': [0],
+                '10%': [10, 10],
+                '50%': [80, 50],
+                '80%': 150,
+                'max': 200
+            }
+        });
+        rangeSlider.noUiSlider.on('update', function( values, handle ) {
+            $('#slider-range-param2 .slider-range-value').val(Math.round(values[handle]));
+        });
+
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+.jq-checkbox, .jq-radio
+  position: relative
+  display: inline-block
+  overflow: hidden
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.jq-checkbox input, .jq-radio input
+  position: absolute
+  z-index: -1
+  margin: 0
+  padding: 0
+  opacity: 0
+
+.jq-file
+  position: relative
+  display: inline-block
+  overflow: hidden
+  input
+    position: absolute
+    top: 0
+    right: 0
+    height: auto
+    margin: 0
+    padding: 0
+    opacity: 0
+    font-size: 100px
+    line-height: 1em
+
+.jq-file__name
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+.jq-selectbox, .jq-select-multiple
+  position: relative
+  display: inline-block
+
+.jq-selectbox select, .jq-select-multiple select
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: 0
+  padding: 0
+  opacity: 0
+
+.jq-selectbox li, .jq-select-multiple li
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  white-space: nowrap
+
+.jq-selectbox
+  z-index: 10
+
+.jq-selectbox__select
+  position: relative
+
+.jq-selectbox__select-text
+  overflow: hidden
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  white-space: nowrap
+  text-overflow: ellipsis
+
+.jq-selectbox__dropdown
+  position: absolute
+
+.jq-selectbox__search input
+  -webkit-appearance: textfield
+  &::-webkit-search-cancel-button, &::-webkit-search-decoration
+    -webkit-appearance: none
+
+.jq-selectbox__dropdown ul
+  position: relative
+  overflow: auto
+  overflow-x: hidden
+  list-style: none
+  -webkit-overflow-scrolling: touch
+
+.jq-select-multiple ul
+  position: relative
+  overflow-x: hidden
+  -webkit-overflow-scrolling: touch
+
+.jq-number
+  display: inline-block
+
+.jq-number__field input
+  -moz-appearance: textfield
+  text-align: left
+  /* для Opera Presto 
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+    margin: 0
+    /* в каких-то браузерах присутствует отступ
+    -webkit-appearance: none
+@import _form_styler_theme
+
+// input google material styles
+
+.group
+  position: relative
+  margin:
+    top: 25px
+  padding-bottom: 15px
+  input
+    font-size: 16px
+    padding:
+      left: 0px
+      right: 0px
+      bottom: 10px
+      top: 10px
+    width: 100%
+    display: block
+    border: none
+    border-bottom: 1px solid #757575
+    &:focus
+      outline: none
+
+
+  /* LABEL =======================================
+
+  label
+    color: #999
+    font-size: 16px
+    font-weight: normal
+    position: absolute
+    pointer-events: none
+    left: 0px
+    top: 10px
+    transition: 0.2s ease all
+    -moz-transition: 0.2s ease all
+    -webkit-transition: 0.2s ease all
+
+  /* active state
+  textarea
+    border:
+      left: 0px
+      right: 0px
+      top: 0px
+      bottom: 1px solid $color_gray_border_light
+    resize: none
+    outline: none
+  input, textarea
+    &:focus
+      border-color: transparent
+    &:focus ~ label, &:valid ~ label
+      top: -10px
+      font-size: 14px
+      color: $color_gray_light
+
+
+  /* BOTTOM BARS =================================
+
+  .bar
+    position: relative
+    display: block
+    &:before, &:after
+      content: ''
+      height: 2px
+      width: 0
+      bottom: 1px
+      position: absolute
+      background: $color_orange
+      transition: 0.2s ease all
+      -moz-transition: 0.2s ease all
+      -webkit-transition: 0.2s ease all
+    &:before
+      left: 50%
+    &:after
+      right: 50%
+
+  /* active state
+
+  input:focus ~ .bar,
+  textarea:focus ~ .bar
+    &:before, &:after
+      width: 50%
+
+  /* HIGHLIGHTER ==================================
+
+  .highlight
+    position: absolute
+    height: 60%
+    right: 15px
+    pointer-events: none
+    opacity: 0.5
+    margin-top: 10px
+    font-size: 12px
+
+  /* active state
+
+  input:focus ~ .highlight,
+  textarea:focus ~ .highlight
+    -webkit-animation: inputHighlighter 0.3s ease
+    -moz-animation: inputHighlighter 0.3s ease
+    animation: inputHighlighter 0.3s ease
+
+/* ANIMATIONS ================
+@-webkit-keyframes inputHighlighter
+  from
+    background: #5264AE
+
+  to
+    width: 0
+    background: transparent
+
+
+@-moz-keyframes inputHighlighter
+  from
+    background: #5264AE
+
+  to
+    width: 0
+    background: transparent
+
+
+@keyframes inputHighlighter
+  from
+    background: #5264AE
+
+  to
+    width: 0
+    background: transparent
+
+// bootstrap accardion
+
+.panel
+  border-width: 0 0 1px 0
+  border-style: solid
+  border-color: #fff
+  background: none
+  box-shadow: none
+  &:last-child
+    border-bottom: none
+  .panel-collapse
+    overflow: hidden
+    height: 0
+    &.in
+      height: auto
+      overflow: initial
+.panel-group
+  > .panel:first-child .panel-heading
+    border-radius: 4px 4px 0 0
+  .panel
+    border-radius: 0
+    + .panel
+      margin-top: 0
+
+.panel-heading
+  border-radius: 0
+  border: none
+  color: #fff
+  padding: 0
+
+.panel-title a
+  display: block
+  color: #000
+  padding-left: 15px
+  position: relative
+  font-size: 16px
+  font-weight: 400
+  font-family: $font-Roboto-Medium
+  text-decoration: none
+  position: relative
+  &:before
+    content: ''
+    width: 5px
+    height: 60px
+    background-color: $color_orange_87
+    position: absolute
+    top: 0px
+    left: 0px
+
+.panel-body
+  background: #fff
+  padding: 15px
+
+.panel:last-child
+  .panel-body
+    border-radius: 0 0 4px 4px
+  .panel-heading
+    border-radius: 0 0 4px 4px
+    transition: border-radius 0.3s linear 0.2s
+    &.active
+      border-radius: 0
+      transition: border-radius linear 0s
+
+/* #bs-collapse icon scale option

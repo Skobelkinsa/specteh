@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Верстка для спецтех-портал.рф</title>
+    <link rel="stylesheet" href="style/global.css">
+</head>
+<body>
+<header>
+    <div class="content">
+        <a href="#" class="toggle-menu"><img src="img/menu.svg" width="18" alt="catalog"></a>
+        <div class="menu">
+            <a href="#">Объявления</a>
+            <a href="#">Контакты</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="location">
+            <a href="#"><img src="img/location-pin.svg" width="14" alt="location"> <span>Выбрать регион</span></a>
+            <p>Пермь</p>
+        </div>
+        <div class="login-user">
+            <a href="#"><img src="img/user-shape.svg" width="18" alt="location"> <span>Личный кабинет</span></a>
+            <p>Вход / Регистрация</p>
+        </div>
+    </div>
+</header>
+<div class="gray-header">
+    <div class="content">
+        <a href="#" class="h1">Cпецтех-портал.рф</a>
+        <div class="search">
+            <input type="text" placeholder="Что ищем?">
+            <button><img src="img/search.svg" width="17" alt="location"></button>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <br><br><br>
+    <!-- Button trigger modal -->
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#send">
+        Ваш вопрос успешно отправлен
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="send" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div class="modal-title success" id="myModalLabel">Ваш вопрос успешно отправлен</div>
+                </div>
+                <div class="modal-body">
+                    <p>Мы ответим в ближайшее время.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#add">
+        Ваше объявление успешно добавлено!
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div class="modal-title success" id="myModalLabel">Ваше объявление успешно добавлено!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_add">
+        Ваше объявление успешно добавлено!
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="pay_add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div class="modal-title success" id="myModalLabel">Ваш кошелек успешно пополнен!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_success">
+        Услуга оплачена!
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="pay_success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div class="modal-title success" id="myModalLabel">Услуга оплачена!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#add_error">
+        Ваше объявление не добавлено
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="add_error" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div class="modal-title success" id="myModalLabel">Ваше объявление не добавлено.</div>
+                </div>
+                <div class="modal-body">
+                    <p>Проверьте правильность заполнения полей</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#error">
+        Произошла ошибка
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="error" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div class="modal-title success" id="myModalLabel">Произошла ошибка.</div>
+                </div>
+                <div class="modal-body">
+                    <p>Повторите попытку позднее</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/global.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

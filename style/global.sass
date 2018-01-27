@@ -1,0 +1,1771 @@
+// add mixins for projects
+@import _mixins
+
+// reset style crossbrowsers
+@import imports/reset
+@import imports/normalize
+
+// include fonts
+$font-Roboto-Regular: 'Roboto-Regular'
+$font-Roboto-Medium: 'Roboto-Medium'
+$font-TTSquares-Regular3: 'TTSquares-Regular3'
+$font-TTSquares-Regular4: 'TTSquares-Regular4'
+$font-TTSquares-Regular5: 'TTSquares-Regular5'
+@include font-face($font-Roboto-Regular, $font-Roboto-Regular, 500, normal, eot woff ttf svg)
+@include font-face($font-Roboto-Medium, $font-Roboto-Medium, 500, normal, eot woff ttf svg)
+@include font-face($font-TTSquares-Regular3, $font-TTSquares-Regular3, 500, normal, eot woff ttf svg)
+@include font-face($font-TTSquares-Regular4, $font-TTSquares-Regular4, 500, normal, eot woff ttf svg)
+@include font-face($font-TTSquares-Regular5, $font-TTSquares-Regular5, 500, normal, eot woff ttf svg)
+
+
+// colors plan
+$color_white: #fafafa
+$color_gray_border_light: #e0e0e0
+$color_gray_ee: #eeeeee
+$color_gray_b6: #b6b6b6
+$color_gray_37: #a1a1a1
+$color_gray_light: #979797
+$color_gray_75: #757575
+$color_gray: #424242
+$color_gray_dark: #272727
+$color_gray_87: #212121
+$color_orange_light: #fff8e1
+$color_orange_placeholder: #ffb86e
+$color_orange: #ff6f00
+$color_orange_87: #ff9800
+$color_orange_cat_2: #ffab00
+$color_orange_cat_3: #ffc400
+$color_orange_cat_4: #ffd740
+$green: #558b2f
+$red: #bf360c
+
+// selection text color
+
+*::selection
+  background: $color_orange_placeholder
+*::-moz-selection
+  background: $color_orange_placeholder
+
+// global styles
+
+
+body
+  font-family: $font-Roboto-Regular
+  background-color: $color_white
+
+header
+  .toggle-menu
+    display: none
+  .location
+    width: 20%
+    display: inline-block
+    vertical-align: middle
+    color: $color_gray_light
+    p
+      padding-left: 22px
+      font-size: 0.9em
+      line-height: 18px
+    a
+      color: $color_orange_87
+      text-decoration: none
+      display: table
+      vertical-align: middle
+      font-size: 0.9em
+      &:hover
+        span
+          text-decoration: underline
+    img
+      display: table-cell
+      padding-right: 7px
+    span
+      display: table-cell
+      vertical-align: middle
+  .login-user
+    width: 20%
+    display: inline-block
+    vertical-align: middle
+    color: $color_gray_light
+    p
+      padding-left: 25px
+      font-size: 0.9em
+      line-height: 18px
+    a
+      color: $color_orange_87
+      text-decoration: none
+      display: inline-table
+      vertical-align: middle
+      font-size: 0.9em
+      &:hover
+        span
+          text-decoration: underline
+      &.logout
+        margin-left: 15px
+        width: 24px
+        height: 24px
+        background:
+          image: url('data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDUzMy4zMzMgNTMzLjMzMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTMzLjMzMyA1MzMuMzMzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQxNi42NjcsMzMzLjMzM3YtNjYuNjY2SDI1MFYyMDBoMTY2LjY2N3YtNjYuNjY3bDEwMCwxMDBMNDE2LjY2NywzMzMuMzMzeiBNMzgzLjMzMywzMDB2MTMzLjMzM0gyMTYuNjY3djEwMGwtMjAwLTEwMFYwICAgaDM2Ni42Njd2MTY2LjY2N0gzNTBWMzMuMzMzSDgzLjMzM0wyMTYuNjY3LDEwMHYzMDBIMzUwVjMwMEgzODMuMzMzeiIgZmlsbD0iI2ZmOTgwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=')
+        span
+          display: none
+    img
+      display: table-cell
+      padding-right: 7px
+    span
+      display: table-cell
+      vertical-align: middle
+  .menu
+    width: 56%
+    display: inline-block
+    vertical-align: middle
+    a
+      font-weight: bold
+      font-size: 1.2em
+      color: $color_gray
+      text-decoration: none
+      letter-spacing: 1px
+      display: table-cell
+      padding-right: 20px
+      vertical-align: middle
+      height: 65px
+      &:hover
+        color: $color_orange
+footer
+  .black
+    height: 43px
+    padding-top: 20px
+    background-color: $color_gray_87
+    color: $color_gray_light
+    p
+      padding-left: 15px
+      font-size: 12px
+  .logo
+    font-family: $font-TTSquares-Regular4
+    font-size: 16px
+    display: table-cell
+    vertical-align: middle
+    text-align: right
+    a
+      text-decoration: none
+      color: $color_white
+      font-style: italic
+      &:hover
+        color: $color_orange
+  .gray-light
+    height: 100px
+    background-color: $color_gray
+    color: $color_white
+    .link-left
+      width: 88%
+      padding:
+        top: 25px
+        left: 15px
+      display: table-cell
+      a
+        color: $color_white
+        margin-right: 18px
+        display: inline-block
+        text-decoration: none
+        &:hover
+          color: $color_orange
+      .cop
+        color: $color_gray_light
+        font-size: 14px
+        display: block
+        margin: 20px 0
+  .color-category
+    margin-top: 35px
+    width: 100%
+    display: table
+    @include bg-horizontal($color_orange_87, 50%, $color_orange_cat_4, 50%)
+    a
+      width: 220px
+      padding-left: 15px
+      display: table-cell
+      vertical-align: middle
+      height: 63px
+      text-transform: uppercase
+      text-decoration: none
+      font-size: 0.9em
+      color: $color_gray_dark
+      &:nth-child(1)
+        background-color: $color_orange_87
+      &:nth-child(2)
+        background-color: $color_orange_cat_2
+      &:nth-child(3)
+        background-color: $color_orange_cat_3
+      &:nth-child(4)
+        background-color: $color_orange_cat_4
+a
+  color: $color_orange_87
+.content
+  width: 906px
+  padding: 0 15px
+  margin: 0 auto
+
+
+// Elements Form
+
+.btn
+  font-family: $font-Roboto-Medium
+  font-size: 14px
+  text-transform: uppercase
+  display: block
+  line-height: 36px
+  color: #fff
+  background-color: $color_orange_87
+  border: 0
+  width: 200px
+  height: 36px
+  text-align: center
+  border-radius: 3px
+  margin: 30px 0
+  @include material_shadow('button')
+  &:hover
+    @include material_shadow('hover')
+  &.btn-lg
+    width: auto
+@import _form_styler
+@import _nouislider
+button, input
+  outline: none
+
+
+// home blocks
+
+.gray-header
+  background-color: $color_gray
+  height: 65px
+  position: relative
+  z-index: 1
+  .h1
+    font-family: $font-TTSquares-Regular4
+    color: $color_white
+    font-size: 1.6em
+    line-height: 65px
+    float: left
+    text-decoration: none
+  .search
+    float: right
+    margin-top: 15px
+    input
+      width: 280px
+      margin-right: 33px
+      color: $color_white
+      background: transparent
+      padding: 5px 0
+      border:
+        top: 0px
+        left: 0px
+        right: 0px
+        bottom: 2px solid $color_orange_87
+    button
+      background: transparent
+      border: 0
+      margin-right: 20px
+      position: relative
+      top: 10px
+.home-banner
+  height: 194px
+  padding-top: 63px
+  @include bg-vertical($color_gray_87, 0%, $color_gray, 100%)
+  .h1
+    font-family: $font-TTSquares-Regular5
+    color: $color_orange
+    font-size: 4.7em
+    text-transform: uppercase
+  .h2
+    font-family: $font-TTSquares-Regular3
+    color: $color_white
+    font-size: 1.9em
+  .content
+    position: relative
+    &:after
+      content: ''
+      width: 414px
+      height: 274px
+      background: url('../img/banner_tekh.png')
+      position: absolute
+      top: -83px
+      right: -25px
+.home-category
+  .catecory-section
+    clear: both
+    &:nth-child(2) .category:after
+      background-color: $color_orange_cat_2
+    &:nth-child(3) .category:after, &:nth-child(4) .category:after
+      background-color: $color_orange_cat_3
+    .category
+      @include material_shadow('light')
+      position: relative
+      width: 100%
+      height: 215px
+      background-color: #fff
+      padding:
+        top: 42px
+      margin: 15px 0
+      &:after
+        content: ''
+        width: 15px
+        height: 100%
+        background-color: $color_orange_87
+        position: absolute
+        top: 0px
+        left: 0px
+      .h2
+        font-family: $font-TTSquares-Regular4
+        color: #000
+        font-size: 2em
+        padding-left: 63px
+        margin-bottom: 40px
+        height: 100px
+        display: block
+        text-decoration: none
+      .btn
+        text-decoration: none
+        font-family: $font-Roboto-Medium
+        font-size: 14px
+        text-transform: uppercase
+        color: #fff
+        background-color: $color_orange_87
+        border: 0
+        width: 200px
+        height: 36px
+        border-radius: 3px
+        margin:
+          left: 63px
+        @include material_shadow('button')
+        &:hover
+          @include material_shadow('hover')
+    .category-list
+      .category-item
+        margin: 0 15px 15px 15px
+        background-color: #fff
+        float: left
+        @include material_shadow('button')
+        .desc
+          color: $color_gray_light
+          padding: 25px 15px 20px 15px
+          .date
+            font-size: 14px
+          .title
+            color: $color_gray_dark
+            font-family: $font-Roboto-Medium
+            display: block
+            margin-bottom: 5px
+            text-decoration: none
+          .price
+            font-size: 1.5em
+            display: block
+            margin-bottom: 10px
+            color: $color_gray_dark
+            font-family: $font-Roboto-Medium
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0
+        &:hover
+          @include material_shadow('hover')
+          .title
+            color: $color_orange_87
+.seo-text
+  color: $color_gray_75
+  font-family: $font-Roboto-Regular
+  clear: both
+  line-height: 1.5
+  margin-bottom: 45px
+  p
+    margin: 0 0 10px
+  .title
+    color: $color_gray_87
+    font-family: $font-Roboto-Medium
+    padding: 30px 0 15px
+    font-size: 1.3em
+
+
+// category page
+
+.category-page
+  margin-top: 45px
+  .sub-category
+    background-color: #fff
+    padding: 15px
+    margin-bottom: 30px
+    @include material_shadow('light')
+    .more
+      font-family: $font-Roboto-Medium
+      font-size: 14px
+      text-transform: uppercase
+      display: block
+      line-height: 36px
+      color: $color_orange_87
+      transition: background-color .5s
+      background-color: transparent
+      border: 0
+      width: 200px
+      height: 36px
+      text-align: center
+      border-radius: 3px
+      margin: 15px auto
+      &:hover
+        background-color: $color_orange_light
+    .h2
+      font-family: $font-TTSquares-Regular4
+      font-size: 1.3em
+      margin-bottom: 15px
+    .category-list
+      display: flex
+      .category-item:nth-child(3n+2)
+        margin:
+          left: 15px
+          right: 15px
+  .category-list
+    clear: both
+    .category-item:hover .title
+      color: $color_orange_87
+    &.full
+      .category-item
+        position: relative
+        width: 100%
+        max-width: 100%
+        min-height: 0px
+        margin: 0 0 15px 0
+        background-color: #fff
+        float: left
+        display: table
+        @include material_shadow('button')
+        .imag-prev
+          width: 180px
+          display: table-cell
+          padding-right: 15px
+        .desc
+          display: table-cell
+          color: $color_gray_light
+          padding: 15px
+          vertical-align: top
+          .city, .type
+            display: block
+            font-size: 14px
+            font-family: $font-Roboto-Regular
+            color: $color_gray
+            line-height: 1.5
+          .text
+            display: block
+            line-height: 1.5
+            font-size: 14px
+            font-family: $font-Roboto-Regular
+            color: $color_gray_light
+            margin-top: 15px
+          .phone
+            display: block
+            width: 125px
+            position: absolute
+            top: 35px
+            right: 15px
+            text-align: right
+            &.active span
+              display: inline-block
+            span
+              display: none
+              left: -33px
+              position: absolute
+              line-height: 20px
+              width: 126px
+              color: #fff
+              font-family: $font-Roboto-Medium
+              font-size: 12px
+              text-align: center
+              background-color: $color_orange_87
+              .arrow
+                width: 0
+                height: 0px
+                border: 7px solid transparent
+                margin-top: -7px
+              .right
+                display: inline-block
+                border:
+                  right: 0
+                  left-color: $color_orange_87
+                position: absolute
+                right: -7px
+                top: 50%
+          .date
+            font-size: 14px
+            position: absolute
+            top: 15px
+            right: 0px
+            width: 125px
+            text-align: center
+          .title
+            width: 300px
+            color: $color_gray_dark
+            font-family: $font-Roboto-Medium
+            display: table
+            margin-bottom: 5px
+          .price
+            width: 300px
+            font-size: 1.5em
+            display: table
+            margin-bottom: 10px
+            color: $color_gray_dark
+            font-family: $font-Roboto-Medium
+        &:hover
+          @include material_shadow('hover')
+          .title
+            color: $color_orange_87
+  .left-block
+    width: 204px
+    display: table-cell
+    padding-right: 15px
+    vertical-align: top
+    .category-section-list
+      background-color: #fff
+      display: table
+      width: 100%
+      @include material_shadow('light')
+      a
+        width: 92%
+        background-color: #fff
+        transition: background-color .5s
+        font-size: 14px
+        font-family: $font-Roboto-Medium
+        color: $color_gray
+        position: relative
+        height: 52px
+        display: table
+        text-decoration: none
+        line-height: 14pt
+        padding:
+          left: 17px
+          top: 7px
+          bottom: 15px
+        &:hover
+          background-color: $color_orange_87
+          color: #fff
+          &:after
+            content: ''
+            width: 100%
+            height: 5px
+            background-color: #fff
+            position: absolute
+            left: 0
+            bottom: 0
+        &:before
+          content: ''
+          position: absolute
+          left: 0
+          top: 0
+          width: 5px
+          height: 67px
+          background-color: $color_orange_87
+        &:nth-child(2)
+          &:hover
+            background-color: $color_orange_cat_2
+            color: #fff
+            &:after
+              content: ''
+              width: 100%
+              height: 5px
+              background-color: #fff
+              position: absolute
+              left: 0
+              bottom: 0
+          &:before
+            background-color: $color_orange_cat_2
+        &:nth-child(3)
+          &:hover
+            background-color: $color_orange_cat_3
+            color: #fff
+            &:after
+              content: ''
+              width: 100%
+              height: 5px
+              background-color: #fff
+              position: absolute
+              left: 0
+              bottom: 0
+          &:before
+            background-color: $color_orange_cat_3
+        &:nth-child(4)
+          &:hover
+            background-color: $color_orange_cat_3
+            color: #fff
+            &:after
+              content: ''
+              width: 100%
+              height: 5px
+              background-color: #fff
+              position: absolute
+              left: 0
+              bottom: 0
+          &:before
+            background-color: $color_orange_cat_3
+    .add-btn
+      font-family: $font-Roboto-Medium
+      font-size: 14px
+      text-transform: uppercase
+      display: block
+      line-height: 36px
+      color: #fff
+      background-color: $color_orange_87
+      border: 0
+      width: 200px
+      height: 36px
+      text-align: center
+      border-radius: 3px
+      margin: 30px 0
+      @include material_shadow('button')
+      &:hover
+        @include material_shadow('hover')
+    .category-item
+      @include material_shadow('light')
+      a
+        background-color: $color_orange_light
+      .desc
+        background-color: $color_orange_light
+        border:
+          left: 1px solid $color_orange_87
+          right: 1px solid $color_orange_87
+          bottom: 1px solid $color_orange_87
+  .content-block
+    padding-left: 15px
+    width: 672px
+    display: table-cell
+    vertical-align: top
+    &.cat-list
+      .category, .btn
+        display: none
+
+  .filter-category
+    background-color: #fff
+    padding: 15px 15px 0
+    .back
+      display: none
+    .category
+      display: none
+    .show-filter
+      color: $color_orange_87
+      text-align: right
+      text-decoration: none
+      display: table
+      float: right
+      font-size: 14px
+      margin: 15px 0
+      img
+        display: table-cell
+        vertical-align: middle
+        float: right
+    .filter-block
+      clear: both
+      height: 0
+      overflow: hidden
+      &>*
+        margin: 10px
+      &.open
+        height: 100%
+        overflow: visible
+      .checkbox-list
+        display: inline-block
+        vertical-align: top
+      label
+        display: block
+        font-size: 14px
+        margin-bottom: 8px
+      .select-list
+        display: inline-block
+        vertical-align: top
+        .jq-selectbox
+          width: auto
+          height: 30px
+          padding-right: 5px
+          margin:
+            right: 15px
+            bottom: 15px
+          border: 1px solid $color_gray_border_light
+          .jq-selectbox__select
+            vertical-align: middle
+            height: 30px
+            min-width: 50px
+      .range-list
+        display: inline-block
+        vertical-align: top
+        .noUi-target
+          margin-bottom: 30px
+        label
+          font-family: $font-Roboto-Regular
+          font-size: 14px
+          color: $color_gray_87
+          margin: 0 0 30px
+          display: block
+    button
+      font-family: $font-Roboto-Medium
+      font-size: 14px
+      text-transform: uppercase
+      display: inline-block
+      margin-left: 15px
+      line-height: 36px
+      color: #fff
+      background-color: $color_orange_87
+      border: 0
+      width: 125px
+      height: 36px
+      text-align: center
+      border-radius: 3px
+      &:hover
+        @include material_shadow('hover')
+    .search
+      display: inline-block
+      height: 30px
+      padding: 7px 0
+      border: 1px solid $color_gray_border_light
+      width: 496px
+      .search-input
+        display: inline-block
+        input
+          font-family: $font-Roboto-Regular
+          font-size: 14px
+          padding: 0 25px
+          border:
+            left: 1px solid $color_gray_border_light
+            right: 1px solid $color_gray_border_light
+            top: 0
+            bottom: 0
+          height: 31px
+      .jq-selectbox
+        padding-left: 5px
+        padding-right: 5px
+        max-width: 125px
+        width: 125px
+  .sort-block
+    color: $color_gray_75
+    font-family: $font-Roboto-Regular
+    font-size: 14px
+    .date
+      margin-right: 60px
+      display: inline-block
+      float: right
+      line-height: 50px
+      a
+        svg
+          fill: $color_gray_75
+        &.active svg
+          fill: $color_orange
+    .view-mode
+      display: inline-block
+      float: right
+      line-height: 50px
+      a
+        svg
+          fill: $color_gray_75
+        &.active svg
+          fill: $color_orange
+    .bread
+      margin: 15px 0
+      display: inline-block
+      a
+        text-decoration: none
+        display: inline-block
+        margin-right: 15px
+        color: $color_gray_75
+        font-family: $font-Roboto-Regular
+        font-size: 14px
+        &.active, &:hover
+          color: $color_orange
+  .banner-block
+    .category-item
+      margin:
+        left: 0 !important
+        right: 0 !important
+        bottom: 18px !important
+  .category-item
+    max-width: 204px
+    min-height: 280px
+    margin: 0 0 15px 0
+    background-color: #fff
+    float: left
+    @include material_shadow('button')
+    .city, .phone, .text, .type
+      display: none
+    .desc
+      color: $color_gray_light
+      padding: 25px 15px 20px 15px
+      .date
+        font-size: 14px
+      .title
+        color: $color_gray_dark
+        font-family: $font-Roboto-Medium
+        display: block
+        text-decoration: none
+        margin-bottom: 5px
+      .price
+        font-size: 1.5em
+        display: block
+        margin-bottom: 10px
+        color: $color_gray_dark
+        font-family: $font-Roboto-Medium
+    &:nth-child(3n+2)
+      margin:
+        right: 30px
+        left: 30px
+    &:hover
+      @include material_shadow('hover')
+
+  .navigation
+    clear: both
+    padding-top: 25px
+    a
+      line-height: 47px
+      height: 47px
+      text-decoration: none
+      color: $color_gray
+      border: 1px solid transparent
+      padding: 10px 15px
+      &:hover
+        border: 1px solid $color_gray_border_light
+      &.active
+        background-color: $color_orange_87
+        color: #fff
+        border: 1px solid $color_orange_87
+
+
+// detail page
+
+@import _proslider
+.detail-page
+  margin-top: 45px
+  .left-block
+    width: 204px
+    display: table-cell
+    padding-right: 15px
+    vertical-align: top
+    .service
+      background-color: #fff
+      display: table
+      width: 100%
+      overflow: hidden
+      .title
+        font-family: $font-Roboto-Medium
+        font-size: 16px
+        color: $color_gray
+        display: block
+        margin: 15px
+        line-height: 1.5
+        text-decoration: none
+      a:not(.title)
+        font-size: 16px
+        font-family: $font-Roboto-Medium
+        color: $color_gray
+        position: relative
+        width: 100%
+        height: 52px
+        display: table
+        text-decoration: none
+        line-height: 1.5
+        padding:
+          left: 17px
+          top: 15px
+          bottom: 3px
+        img
+          float: left
+          margin-right: 8px
+        &:hover span
+          color: $color_orange_87
+        span
+          transition: color .5s
+          display: block
+          line-height: 35px
+        &:before
+          content: ''
+          position: absolute
+          left: 0
+          top: 0
+          width: 5px
+          height: 67px
+          background-color: $color_orange_87
+        &:nth-child(2):before
+          background-color: $color_orange_cat_2
+        &:nth-child(3):before, &:nth-child(4):before
+          background-color: $color_orange_cat_3
+    .edit-btn
+      font-family: $font-Roboto-Medium
+      color: $color_gray_87
+      font-size: 14px
+      text-decoration: underline
+      line-height: 1.5
+      display: table
+      transition: color .5s
+      margin:
+        top: 15px
+        bottom: 30px
+      img
+        margin-right: 4px
+        vertical-align: middle
+      &:hover
+        color: $color_orange_87
+      span
+        vertical-align: middle
+        display: table-cell
+    .category-item
+      @include material_shadow('light')
+      a
+        background-color: $color_orange_light
+      .desc
+        background-color: $color_orange_light
+        border:
+          left: 1px solid $color_orange_87
+          right: 1px solid $color_orange_87
+          bottom: 1px solid $color_orange_87
+  .category-item
+    max-width: 204px
+    min-height: 280px
+    margin: 0 0 15px 0
+    background-color: #fff
+    float: left
+    @include material_shadow('button')
+    .desc
+      color: $color_gray_light
+      padding: 25px 15px 20px 15px
+      .date
+        font-size: 14px
+      .title
+        color: $color_gray_dark
+        font-family: $font-Roboto-Medium
+        display: block
+        margin-bottom: 5px
+      .price
+        font-size: 1.5em
+        display: block
+        margin-bottom: 10px
+        color: $color_gray_dark
+        font-family: $font-Roboto-Medium
+    &:hover
+      @include material_shadow('hover')
+  .content-block
+    padding-left: 15px
+    width: 672px
+    display: table-cell
+    vertical-align: top
+    .banner-block
+      display: none
+    .social
+      margin-top: 15px
+      p
+        float: left
+        line-height: 49px
+        font-size: 14px
+        margin-right: 15px
+      a
+        display: inline-block
+        border: 1px solid transparent
+        outline: none
+        &:hover
+          border: 1px solid $color_gray_border_light
+        &:focus
+          background-color: $color_orange_87
+          border: 1px solid $color_orange_87
+    .specific
+      width: 100%
+      color: $color_gray_light
+      line-height: 1.5
+      font-size: 16px
+      background-color: #fff
+      margin:
+        top: 15px
+        bottom: 15px
+      height: 136px
+      display: table
+      .row
+        margin: 15px
+      @include material_shadow('light')
+      .title
+        font-family: $font-Roboto-Medium
+        font-size: 1.4em
+        margin-bottom: 15px
+        color: $color_gray_87
+      .prop
+        width: 423px
+        font-size: 14px
+        color: $color_gray_87
+        margin-bottom: 25px
+        td
+          line-height: 1.5
+          padding:
+            top: 14px
+          &:last-child
+            text-align: right
+    .product
+      background-color: #fff
+      margin-top: 15px
+      height: 136px
+      display: table
+      @include material_shadow('light')
+      a
+        text-decoration: none
+        color: $color_gray_87
+      .icon
+        display: table
+        img
+          float: left
+          margin-right: 8px
+      .phone
+        font-family: $font-Roboto-Medium
+        font-size: 1.2em
+        line-height: 1.2
+        .visible
+          display: none
+      .send
+        font-size: 14px
+        line-height: 1.7
+        margin-top: 3px
+      .price
+        margin-bottom: 15px
+        width: 204px
+        line-height: 60px
+        text-align: center
+        background-color: $color_orange_87
+        color: #fff
+        font-family: $font-Roboto-Medium
+        font-size: 2em
+      .desc
+        font-size: 14px
+        font-family: $font-Roboto-Regular
+        line-height: 1.5
+        display: table-cell
+        vertical-align: middle
+        width: 438px
+        padding:
+          left: 15px
+          right: 15px
+          top: 15px
+        p
+          margin-bottom: 15px
+        .gray
+          color: $color_gray_light
+    .h1
+      font-family: $font-TTSquares-Regular4
+      font-size: 2em
+      color: $color_gray
+      margin-bottom: 15px
+    .info
+      font-size: 14px
+      font-family: $font-Roboto-Regular
+      color: $color_gray_light
+      line-height: 40px
+      margin-bottom: 20px
+      border:
+        top: 1px solid $color_gray_border_light
+        bottom: 1px solid $color_gray_border_light
+      span
+        float: right
+    .bread
+      margin-bottom: 30px
+      a
+        display: inline-block
+        color: $color_gray_light
+        text-decoration: none
+        font-size: 14px
+        font-family: $font-Roboto-Regular
+        margin-right: 20px
+        &.active
+          color: $color_orange_87
+
+
+// 404 Not Found
+
+.not-found
+  margin-top: 10em
+  .cat-list
+    margin-top: 80px
+    a
+      color: $color_gray
+      font-family: $font-TTSquares-Regular4
+      text-decoration: none
+      font-size: 1.28em
+      display: block
+      float: left
+      width: 44%
+      height: 87px
+      position: relative
+      vertical-align: top
+      margin-bottom: 15px
+      line-height: 1.4
+      padding:
+        left: 30px
+        right: 15px
+        top: 41px
+      @include material_shadow('light')
+      &:before
+        content: ''
+        position: absolute
+        width: 15px
+        height: 100%
+        left: 0
+        top: 0
+        background-color: $color_orange_87
+      &:nth-child(2n+2)
+        margin-left: 15px
+      &:nth-child(2):before
+        background-color: $color_orange_cat_2
+      &:nth-child(3):before, &:nth-child(4):before
+        background-color: $color_orange_cat_3
+  .bg
+    font-family: $font-TTSquares-Regular4
+    font-size: 24em
+    color: $color_orange_87
+    text-align: center
+    position: relative
+    display: block
+    text-decoration: none
+    &:before
+      content: ''
+      width: 55%
+      height: 72%
+      position: absolute
+      right: -4px
+      top: 32%
+      background:
+        image: url('../img/404-image-front.png')
+        repeat: no-repeat
+        position: center
+        size: cover
+    &:after
+      content: ''
+      width: 97%
+      height: 100%
+      position: absolute
+      top: -0.26em
+      left: 25px
+      z-index: -1
+      background:
+        image: url('../img/404-bg.png')
+        position: center
+        size: cover
+        repeat: no-repeat
+    .desc
+      font-size: 14px
+      font-family: $font-Roboto-Regular
+      text-align: left
+      color: $color_gray_87
+      position: absolute
+      bottom: -15px
+      left: 25px
+      line-height: 1.5
+      p
+        margin-bottom: 15px
+
+
+// add item
+
+.info-add-item
+  background-color: #fff
+  font-family: $font-Roboto-Regular
+  font-size: 14px
+  padding: 15px
+  line-height: 1.5
+  margin-bottom: 15px
+  @include material_shadow('light')
+  a
+    color: $color_orange
+    display: block
+    margin-top: 15px
+  .title
+    font-family: $font-Roboto-Medium
+    font-size: 16px
+    margin-bottom: 15px
+    &:hover
+      color: $color_orange_87
+  ul
+    li
+      margin: 10px 0
+      position: relative
+.warn
+  padding: 15px
+  line-height: 1.5
+  font-family: $font-Roboto-Medium
+  font-size: 14px
+  background-color: $color_orange_light
+  font-style: italic
+  @include material_shadow('light')
+.add-item
+  .sub
+    line-height: 1.5
+  .loader-photo
+    font-size: 12px
+    color: $color_gray_light
+    line-height: 1.5
+    b
+      font-size: 14px
+      font-family: $font-Roboto-Regular
+      color: $color_gray
+      line-height: 3em
+      vertical-align: top
+      display: table-cell
+      padding-right: 25px
+    .jq-file__name
+      display: none
+    .jq-file
+      box-shadow: none
+      display: table-cell
+    .jq-file__browse
+      display: table
+      vertical-align: top
+  .sub-title
+    display: block
+    margin: 25px 0
+  .title
+    font-family: $font-Roboto-Medium
+    font-size: 1.5em
+    display: table
+    margin-top: 15px
+    span
+      display: table-cell
+      vertical-align: middle
+      font-family: $font-Roboto-Regular
+      color: $color_gray
+      font-size: 16px
+      padding-left: 10px
+  .panel
+    margin-top: 15px
+    .panel-body
+      .reg, .authorize
+        display: none
+        &.active
+          display: block
+    .jq-selectbox
+      margin-bottom: 15px
+      display: table
+      width: 282px
+      border-bottom: 1px solid $color_gray_border_light
+      .jq-selectbox__select-text
+        color: $color_gray_light
+      .jq-selectbox__select
+        padding: 0px
+        font-size: 16px
+      &.focused
+        border-bottom: 1px solid $color_orange_87
+        .jq-selectbox__select-text
+          color: #000
+    .checkbox-list
+      font-size: 14px
+      label
+        line-height: 1.5
+        display: block
+        vertical-align: top
+        margin-right: 15px
+        margin-bottom: 15px
+    .range-list
+      margin-bottom: 50px
+      .range-block
+        height: 50px
+        margin-bottom: 30px
+        label
+          display: block
+          margin: 10px 0 30px
+          font-size: 16px
+          color: $color_gray_light
+    .login
+      color: $color_orange_87
+      font-size: 14px
+    .btn
+      display: inline-block
+      margin-right: 15px
+    .group
+      width: 282px
+    .panel-title
+      background-color: #fff
+      line-height: 60px
+
+
+// faq
+
+.faq
+  line-height: 1.5
+  .title
+    font-family: $font-Roboto-Medium
+    font-size: 1.5em
+    display: table
+    margin:
+      top: 15px
+      bottom: 30px
+    span
+      display: table-cell
+      vertical-align: middle
+      font-family: $font-Roboto-Medium
+      color: $color_gray
+      font-size: 20px
+  .group
+    width: 260px
+
+  .add-faq
+    margin: 15px 0
+    background-color: #fff
+    padding: 15px
+  .panel
+    margin-top: 15px
+    & + .panel
+      margin-top: 15px
+    .panel-body
+      background-color: transparent
+    .panel-title
+      background-color: #fff
+      line-height: 60px
+
+
+// Service
+
+.service
+  .content-block
+    .h2
+      font-family: $font-Roboto-Medium
+      font-size: 1.35em
+      color: $color_gray
+      margin-bottom: 15px
+    .desc
+      font-family: $font-Roboto-Regular
+      font-size: 16px
+      line-height: 1.5
+      color: $color_gray_light
+      margin-bottom: 30px
+      p
+        margin-bottom: 15px
+    .bay
+      font-family: $font-Roboto-Medium
+      font-size: 20px
+      padding: 15px
+      background-color: #fff
+      width: 70%
+    .price
+      font-size: 30px
+      margin: 15px 0 20px
+    .btn
+      width: 126px
+      display: inline-block
+      margin-right: 15px
+    label
+      display: inline-block
+      font-family: $font-Roboto-Regular
+      font-size: 14px
+      p
+        display: inline-block
+        padding-left: 5px
+
+
+// lk-page
+
+.lk-page
+  margin-top: 30px
+  .left-block
+    width: 204px
+    display: table-cell
+    padding-right: 15px
+    vertical-align: top
+    .menu
+      background-color: #fff
+      a
+        font-family: $font-Roboto-Medium
+        font-size: 13px
+        position: relative
+        width: 155px
+        line-height: 60px
+        display: table
+        color: $color_gray
+        text-decoration: none
+        padding-left: 50px
+        svg
+          position: absolute
+          left: 15px
+          top: 50%
+          margin-top: -10px
+          width: 20px
+          fill: $color_gray_75
+          transition: fill .5s
+        &.active, &:hover
+          background-color: $color_orange_87
+          color: #fff
+          svg
+            fill: #fff
+  .content-block
+    padding-left: 15px
+    width: 672px
+    display: table-cell
+    vertical-align: top
+    .h1
+      font-family: $font-TTSquares-Regular4
+      font-size: 2em
+      color: $color_gray
+      margin-bottom: 15px
+    .service
+      .title
+        font-family: $font-Roboto-Medium
+        font-size: 16px
+        display: block
+        margin: 20px 0 10px
+      .gray
+        color: $color_gray_light
+        line-height: 1.5
+      .panel
+        &:nth-child(2) .panel-heading a:before
+          background-color: $color_orange_cat_2
+        &:nth-child(3) .panel-heading a:before
+          background-color: $color_orange_cat_3
+        .panel-heading
+          line-height: 60px
+          background-color: #fff
+          margin-bottom: 15px
+          img
+            float: left
+            margin:
+              top: 10px
+              right: 10px
+        .panel-body
+          background: transparent
+          line-height: 1.5
+          padding:
+            bottom: 15px
+            left: 0
+            top: 0
+
+    .filter
+      margin-bottom: 20px
+      line-height: 32px
+      padding: 5px 0
+      margin-bottom: 20px
+      font-size: 14px
+      font-family: $font-Roboto-Regular
+      border:
+        top: 1px solid $color_gray_border_light
+        bottom: 1px solid $color_gray_border_light
+      & > *
+        display: inline-block
+        margin-right: 10px
+      .type
+        a
+          color: $color_gray
+          &.active
+            color: $color_orange_87
+      .select-type
+        display: none
+      .date
+        span
+          margin-right: 15px
+        a.active svg
+          fill: $color_orange_87
+      &.pay
+        float: left
+        margin-right: 15px
+        .search
+          border: 0
+          background: transparent
+          width: 165px
+        & + .btn
+          margin: 0
+          width: 124px
+
+    .items-list
+      .item
+        margin-bottom: 15px
+        height: 180px
+        background-color: #fff
+        @include material_shadow('light')
+        &:hover
+          @include material_shadow('hover')
+        & > *
+          display: table-cell
+          vertical-align: top
+          padding-right: 15px
+        .imag-prev
+          padding-left: 15px
+        .desc
+          width: 282px
+          color: $color_gray
+          .title
+            font-family: $font-Roboto-Medium
+            font-size: 16px
+            margin: 15px 0
+          .price
+            font-size: 24px
+            margin-bottom: 15px
+            display: block
+          .date, .status
+            font-size: 14px
+            line-height: 1.5
+            font-family: $font-Roboto-Regular
+          .gray
+            color: $color_gray_light
+          .yellow
+            color: $color_orange_87
+          .green
+            color: $green
+          .red
+            color: $red
+          .view
+            color: $color_gray_light
+            font-size: 14px
+            display: block
+            margin-top: 25px
+        .controls
+          .service, .edit
+            margin-top: 15px
+          a
+            font-family: $font-Roboto-Regular
+            font-size: 13px
+            color: $color_gray
+            display: table
+            line-height: 23px
+            text-decoration: none
+            &:hover
+              color: $color_orange_87
+            img
+              margin-right: 8px
+    .balance
+      font-family: $font-Roboto-Medium
+      font-size: 24px
+      line-height: 63px
+      padding-left: 15px
+      background-color: #fff
+      position: relative
+      width: 60%
+      &:before
+        content: ''
+        width: 5px
+        height: 63px
+        background-color: $color_orange_87
+        position: absolute
+        top: 0
+        left: 0
+    .purse-text
+      font-family: $font-Roboto-Regular
+      color: $color_gray_87
+      margin: 30px 0
+      line-height: 1.5
+      .title
+        margin-bottom: 15px
+        display: block
+    .payment-type
+      background-color: #fff
+      color: $color_gray_87
+      width: 80%
+      margin: 30px 0 100px
+      padding: 15px
+      height: 190px
+      .title
+        font-family: $font-Roboto-Medium
+        font-size: 16px
+        margin: 15px 0
+        display: block
+      .col
+        display: inline-block
+        margin-top: 30px
+        width: 49%
+        label
+          display: block
+          margin-bottom: 15px
+
+    .payment-count
+      background-color: $color_orange_87
+      color: #fff
+      width: 80%
+      font-size: 24px
+      line-height: 63px
+      padding: 0 15px
+      input
+        background-color: transparent
+        border: 0
+        font-size: 16px
+        margin-left: 15px
+        width: 125px
+        border-bottom: 1px solid $color_orange_placeholder
+      @include plaseholder_color($color_orange_placeholder)
+    .purse-block
+      display: table-cell
+      padding-right: 15px
+      width: 33%
+      font-family: $font-Roboto-Regular
+      font-size: 14px
+      line-height: 1.5
+      .more
+        display: inline-block
+        text-decoration: none
+      .title
+        font-family: $font-Roboto-Medium
+        font-size: 20px
+        margin: 20px 0 5px
+      a
+        font-family: $font-Roboto-Regular
+        color: $color_orange_87
+        font-size: 14px
+        line-height: 1.5
+        display: block
+    .service-pay
+      margin-bottom: 15px
+      .gray
+        color: $color_gray_light
+        line-height: 1.5
+    .pay-table
+      font-family: $font-Roboto-Regular
+      font-size: 14px
+      width: 100%
+      td
+        line-height: 47px
+        padding: 0 15px
+        border-bottom: 1px solid $color_gray_border_light
+        span
+          display: none
+      tr td:last-child
+        padding-right: 0
+      .heand
+        font-family: $font-Roboto-Medium
+        background-color: $color_orange_light
+        td
+          border: 0
+    .profile
+      background-color: #fff
+      padding: 15px
+      width: 72%
+      font-size: 14px
+      .checkbox-list
+        line-height: 2
+        margin-bottom: 15px
+      .btn
+        margin:
+          bottom: 5px
+          top: 15px
+      p
+        line-height: 1.5
+      a
+        color: $color_orange_87
+      .group
+        width: 282px
+      .title
+        font-family: $font-Roboto-Medium
+        font-size: 20px
+        display: block
+        margin: 15px 0
+
+
+// Login Register page
+
+.auth-bg
+  padding: 160px 0
+  margin-bottom: -35px
+  background: 
+    image: url("../img/login-bg.jpg")
+    repeat: no-repeat
+    size: cover
+    position: center
+.auth
+  border-radius: 10px
+  width: 754px
+  height: 515px
+  background-color: rgba(255, 255, 255, 0.35)
+  margin: 0 auto
+  display: table
+  .registr, .login
+    display: table-cell
+    width: 40%
+    vertical-align: middle
+    transition: all .5s
+  .sign, .reg
+    color: #fff
+    font-family: $font-Roboto-Medium
+    font-size: 20px
+    text-align: center
+    .btn
+      margin: 30px auto
+  .form
+    display: none
+    padding-bottom: 15px
+  .active
+    width: 55%
+    border-radius: 10px
+    background-color: #fff
+    .reg, .sign
+      display: none
+    .form
+      display: block
+      .btn[rel="auth"],
+      .btn[rel="reg"]
+        display: none
+    .login
+      .btn
+        margin-left: 30px
+  .title
+    font-family: $font-TTSquares-Regular4
+    font-size: 30px
+    color: $color_gray
+    padding: 30px
+  .group, .btn
+    margin: 15px 30px
+  .social
+    margin: 0 30px
+    display: table
+    & > *
+      display: table-cell
+      vertical-align: middle
+  .btn
+    width: auto
+    padding: 0 30px
+  .login
+    a
+      color: $color_orange_87
+      font-size: 14px
+    .btn
+      display: inline-block
+
+
+// Modals & Alert
+
+.modal
+  display: none
+  z-index: 9999
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  background:
+    color: rgba(255, 184, 110, 0.45)
+  .modal-title
+    margin-bottom: 15px
+    font-family: $font-Roboto-Medium
+    font-weight: bold
+    font-size: 20px
+    &.success
+      margin-top: 20px
+      padding-top: 35px
+      background:
+        position: top center
+        image: url("../img/success.png")
+        repeat: no-repeat
+    &.error
+      margin-top: 20px
+      padding-top: 35px
+      background:
+        position: top center
+        image: url("../img/error.png")
+        repeat: no-repeat
+  .close
+    position: absolute
+    top: 0
+    right: 0
+    background: transparent
+    border: 0
+    cursor: pointer
+    height: 30px
+    width: 30px
+    transition: background-color .5s
+    &:hover
+      background-color: $color_orange_87
+      color: #fff
+  .modal-dialog
+    width: 300px
+    margin: 0 auto
+    position: absolute
+    margin-left: -150px
+    left: 50%
+    top: 50%
+    background-color: #fff
+    margin-top: -150px
+    .modal-content
+      padding: 15px
+      text-align: center
+
+@import mobile
