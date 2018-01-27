@@ -86,20 +86,7 @@
                     <div class="sp-slide">
                         <img class="sp-image" src="img/blank.gif" data-src="img/demo/detail-pic.jpg" />
                     </div>
-                    <div class="sp-slide">
-                        <img class="sp-image" src="img/blank.gif" data-src="img/demo/detail-pic.jpg" />
-                    </div>
-                    <div class="sp-slide">
-                        <img class="sp-image" src="img/blank.gif" data-src="img/demo/detail-pic.jpg" />
-                    </div><div class="sp-slide">
-                        <img class="sp-image" src="img/blank.gif" data-src="img/demo/detail-pic.jpg" />
-                    </div>
-                    <div class="sp-slide">
-                        <img class="sp-image" src="img/blank.gif" data-src="img/demo/detail-pic.jpg" />
-                    </div>
-                    <div class="sp-slide">
-                        <img class="sp-image" src="img/blank.gif" data-src="img/demo/detail-pic.jpg" />
-                    </div>
+
 
                 </div>
                 <div class="sp-thumbnails">
@@ -370,6 +357,7 @@
             arrows: true,
             buttons: false,
             fullScreen: false,
+            loop: false,
             shuffle: true,
             smallSize: 500,
             mediumSize: 1000,
@@ -377,7 +365,12 @@
             thumbnailArrows: true,
             autoplay: false,
             thumbnailWidth: 125,
-            thumbnailHeight: 70
+            thumbnailHeight: 70,
+            init: function () {
+                if($( '#detail-slider .sp-slides .sp-slide' ).length===1){
+                    $('.sp-thumbnails-container').css('display', 'none');
+                }
+            }
         });
     });
     $(window).resize(function() {
@@ -395,6 +388,7 @@
             arrows: true,
             buttons: false,
             fullScreen: true,
+            loop: false,
             shuffle: true,
             smallSize: 500,
             mediumSize: 1000,
@@ -402,7 +396,12 @@
             thumbnailArrows: true,
             autoplay: false,
             thumbnailWidth: 125,
-            thumbnailHeight: 70
+            thumbnailHeight: 70,
+            init: function () {
+                if($( '#detail-slider .sp-slides .sp-slide' ).length===1){
+                    $('.sp-thumbnails-container').css('display', 'none');
+                }
+            }
         });
     });
 </script>
